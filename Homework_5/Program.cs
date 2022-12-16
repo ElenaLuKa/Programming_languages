@@ -47,7 +47,7 @@ Console.WriteLine("Count of even elements is " + Count);
 */
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-// (отсчет начинается с 0)
+
 /*
 int[] CreateRandomArray(int size, int minValue, int maxValue)
 {
@@ -99,16 +99,12 @@ Console.WriteLine("Sum of elements in not even position is " + sum);
 double[] CreateRandomArray(int size, int minValue, int maxValue)
 {
     double[] array = new double[size];
-    double[] array2 = new double[size];
-    double[] sumArray = new double[size];
-
+   
     for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(minValue, maxValue);
-        array2[i] = Math.Round(new Random().NextDouble(), 2);
-        sumArray[i] = array[i] + array2[i];
+        array[i] = Math.Round(new Random().Next(minValue, maxValue) + new Random().NextDouble(), 2);
     }
-    return sumArray;
+    return array;
 }
 
 void ShowArray(double[] array)
@@ -120,21 +116,21 @@ void ShowArray(double[] array)
     Console.WriteLine();
 }
 
-double differenceMaxMin(int size, double[] sumArray)
+double differenceMaxMin(int size, double[] array)
 {
     int imin = 0;
     int imax = size-1;
     for(int i = 1; i < size; i++)
     {
-        if(sumArray[i] < sumArray[imin])
+        if(array[i] < array[imin])
             imin = i;
         else
         {
-            if(sumArray[i] > sumArray[imax])
+            if(array[i] > array[imax])
                imax = i;         
         }
     }
-    double result = sumArray[imax] - sumArray[imin];
+    double result = array[imax] - array[imin];
     return result;     
 }
 
@@ -151,6 +147,3 @@ ShowArray(myArray);
 double difference = differenceMaxMin(lenght, myArray);
 Console.WriteLine("The difference between the maximum and minimum values is " + difference);
 */
-
-// при отрицательных значениях минимального числа разница становится больше максимального, так как минус на минус дает плюс. 
-// Вроде все кажется логичным в линейном плане, но не уверенна правильно ли в данном случае.
