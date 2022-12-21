@@ -33,7 +33,7 @@ int CountEvenElements(int[] array)
     return count;
 }
 
-Console.Write("input a number of elements: ");
+Console.Write("Input a number of elements: ");
 int lenght = Convert.ToInt32(Console.ReadLine());
 
 int min = 100;
@@ -95,7 +95,7 @@ Console.WriteLine("Sum of elements in not even position is " + sum);
 
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-/*
+
 double[] CreateRandomArray(int size, int minValue, int maxValue)
 {
     double[] array = new double[size];
@@ -144,6 +144,5 @@ int max = Convert.ToInt32(Console.ReadLine());
 double[] myArray = CreateRandomArray(lenght, min, max);
 ShowArray(myArray);
 
-double difference = differenceMaxMin(lenght, myArray);
+double difference = Math.Round(differenceMaxMin(lenght, myArray), 2);
 Console.WriteLine("The difference between the maximum and minimum values is " + difference);
-*/
