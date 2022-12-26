@@ -175,7 +175,7 @@ int IndexOf(int[] collection, int find)
     return position;
 }
 
-int[] array = new int[10]; //new int - команда, которая переводитсяЖ создай новый массив (по умолчанию заполняется нулями)
+int[] array = new int[10]; //new int - команда, которая переводится: создай новый массив (по умолчанию заполняется нулями)
 
 FillArray(array);
 PrintArray(array);

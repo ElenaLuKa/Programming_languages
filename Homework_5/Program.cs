@@ -71,11 +71,8 @@ void ShowArray(int[] array)
 int NotEvenPosition (int[] array)
 {
     int sum = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i % 2 != 0)
-            sum += array[i];
-    }
+    for (int i = 1; i < array.Length; i+=2)
+        sum += array[i];
     return sum;
 }
 
@@ -94,7 +91,7 @@ Console.WriteLine("Sum of elements in not even position is " + sum);
 */
 
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-
+/*
 
 double[] CreateRandomArray(int size, int minValue, int maxValue)
 {
@@ -146,3 +143,4 @@ ShowArray(myArray);
 
 double difference = Math.Round(differenceMaxMin(lenght, myArray), 2);
 Console.WriteLine("The difference between the maximum and minimum values is " + difference);
+*/
