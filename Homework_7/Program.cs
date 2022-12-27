@@ -5,7 +5,7 @@ double[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
     double[,] array = new double[rows, columns];
     for(int i = 0; i < rows; i++)
         for(int j = 0; j < columns; j++)
-            array[i,j] = Math.Round(new Random().Next(minValue, maxValue) + new Random().NextDouble(), 2);
+            array[i,j] = Math.Round(new Random().Next(minValue, maxValue+1) + new Random().NextDouble(), 2);
     return array;
 }
 
@@ -103,9 +103,7 @@ double[] AverageArray(int[,] array)
     {
         double sum = 0;
         for(int i = 0; i < array.GetLength(0); i++)
-        {
-            sum = sum + array[i,j];       
-        }
+            sum = sum + array[i,j];
         Average[j] = Math.Round(sum / array.GetLength(0), 2);
     }
     return Average;
@@ -125,9 +123,7 @@ void Show2dArray(int[,] array)
 void ShowArray(double[] array)
 {
     for(int k = 0; k < array.Length; k++)
-    {
         Console.Write(array[k] + "\t");
-    }
     Console.WriteLine();
 }
 
