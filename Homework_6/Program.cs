@@ -18,6 +18,24 @@ int M = Convert.ToInt32(Console.ReadLine());
 EvenCount(M);
 */
 
+// аналог решения
+/*
+int count = 0;
+Console.WriteLine();
+Console.WriteLine("Start entering numbers one. When you're done print (stop).");
+while(true)
+{
+    string? input = Console.ReadLine();
+    if(input == "stop")
+        break;
+    int number = Convert.ToInt32(input);
+    if(number > 0)
+        count++;
+}
+Console.WriteLine();
+Console.WriteLine($"Count of positives numbers are {count}");
+*/
+
 //Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
 //заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 /*
