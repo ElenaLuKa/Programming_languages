@@ -215,7 +215,7 @@ Show3dArray(Myarray);
 
 // Задача 62. Напишите программу, которая заполнит спирально массив.
 /*
-int[,] FillSpiralArray(int n)
+int[,] SpiralArray(int n)
 {
     int i = 0;
     int j = 0;
@@ -254,6 +254,6 @@ void Show2dArray(int[,] array)
 Console.WriteLine("Input a number of rows and columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] Myarray = FillSpiralArray(n);
+int[,] Myarray = SpiralArray(n);
 Show2dArray(Myarray);
 */
